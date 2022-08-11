@@ -1,0 +1,25 @@
+{
+  "base_unit": "m",
+  "available_units": [
+    {
+      "unit": "cm",
+      "value": 100
+    },
+    {
+      "unit": "km",
+      "value": 0.001
+    },
+    {
+      "unit": "mm",
+      "value": 1000
+    },
+    {
+      "unit": "ft",
+      "value": 3.28
+    },
+    {
+      "unit": "yd",
+      "value": 1.09
+    }
+  ]
+}
