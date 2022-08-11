@@ -1,5 +1,6 @@
 from file_handlers import JsonFilesHandler
 from converter import Converter
+from output import save_converted_data
 
 
 def main():
@@ -10,7 +11,7 @@ def main():
     units_data = input_handler.get_units_data()
 
     converter = Converter(units_data)
-    print(converter.get_converted_unit(input_data))
+    save_converted_data(converter.get_converted_unit(input_data))
 
 
 if __name__ == '__main__':
