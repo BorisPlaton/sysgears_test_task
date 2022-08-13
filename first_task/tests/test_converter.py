@@ -1,3 +1,5 @@
+from pathlib import Path
+
 import pytest
 
 from first_task.converter import Converter
@@ -5,8 +7,13 @@ from first_task.file_handlers import InputDistanceData, JsonFilesHandler
 
 
 @pytest.fixture
-def converter():
-    return Converter(JsonFilesHandler().get_units_data('units.json'))
+def path_to_source():
+    return Path(__file__).resolve().parent / 'source'
+
+
+@pytest.fixture
+def converter(path_to_source):
+    return Converter(JsonFilesHandler().get_units_data(path_to_source / 'units.json'))
 
 
 def get_input_data(convert_from, convert_value, convert_to='m'):

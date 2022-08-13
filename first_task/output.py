@@ -1,6 +1,6 @@
 import json
 
-from file_handlers import UnitInfo
+from first_task.file_handlers import UnitInfo
 
 
 def save_converted_data(converted_data: UnitInfo):

@@ -1,6 +1,6 @@
-from file_handlers import JsonFilesHandler
-from converter import Converter
-from output import save_converted_data
+from first_task.file_handlers import JsonFilesHandler
+from first_task.converter import Converter
+from first_task.output import save_converted_data
 
 
 def main():
