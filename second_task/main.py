@@ -1,13 +1,17 @@
 from pathlib import Path
 
-from io_utils import get_input_data, save_filtered_data
+from common.utils import save_data, get_input_data
 from modules_handler import DataFilter
 
 
 def main(input_file: str | Path):
     """Запускает выполнение программы."""
+    current_dir = Path(__file__).resolve().parent
     handler = DataFilter(get_input_data(input_file))
-    save_filtered_data(handler.get_filtered_data())
+    save_data(
+        handler.get_filtered_data(),
+        current_dir / 'filtered.json'
+    )
 
 
 if __name__ == '__main__':
